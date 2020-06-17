@@ -81,7 +81,7 @@ Here I will list my URL, REST methods, and a sample of the data that is being se
         userId: 4
     }
     ```
-- GET: this will get the user from the database to login in. app.get(`/api/user`)
+- GET: this will get the user from the database to login in. app.get(`/auth/user`)
     ```javascript
     //REFERENCE CODE WRITTEN OUT FOR GET
     getUser: (req, res) => {
@@ -92,7 +92,7 @@ Here I will list my URL, REST methods, and a sample of the data that is being se
     }
   },
     ```
-- DELETE: Can logout of the website. app.delete(`/api/logout`)
+- DELETE: Can logout of the website. app.delete(`/auth/logout`)
     ```javascript
     //REFERENCE CODE WRITTEN OUT FOR DELETE
   logout: (req, res) => {
@@ -101,7 +101,7 @@ Here I will list my URL, REST methods, and a sample of the data that is being se
     res.sendStatus(200);
   },
     ```
-- PUT: Can update the username or profile picture. app.put(`/api/user`)
+- PUT: Can update the username or profile picture. app.put(`/auth/user`)
     ```Javascript
     //REFERNECE CODE WRITTEN OUT FOR PUT
   updateProfile: async (req, res) => {
@@ -121,20 +121,112 @@ Here I will list my URL, REST methods, and a sample of the data that is being se
 *Work in Progress...*
 - PUT: The wheel chart will update when the checkbox is clicked. app.put(`/api/goal`)
     ```Javascript
+    updateChart: async (req, res) => {
+    console.log("hit")
+    const db = req.app.get("db");
+    const { id } = req.params;
+    const { goal } = req.body;
 
+    let data = await db
+      .update_chart(goal)
+      .catch((error) => res.status(500).send(error));
+
+    res.status(200).send(data);
+  },
     ```
 - GET: This will get the Goal for the day when the button is clicked. app.get(`/api/goal`)
     ```Javascript
+    getGoal: (req, res, next) => {
+    const db = req.app.get("db");
 
+    db.get_goal()
+      .then((goal) => res.status(200).send(goal))
+      .catch((error) => {
+        res.status(500).send({ errorMessage: "Opps! Something went wrong can't get goal" });
+        console.log(error);
+      });
+  },
     ```
 
-- DELETE: Can logout of the website. app.delete(`/api/logout`)
+- DELETE: Can logout of the website. app.delete(`/api/remove`)
     ```Javascript
-
+    removegoal: (req, res) => {
+    const db = req.app.get("db");
+    const { id } = req.params;
     ```
 
 
 
 ## Schema (Database Design):
 
-*Work in Progress...*
+### Users TABLE
+```SQL
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(20),
+    password VARCHAR(20),
+    profile_pic TEXT
+);
+
+--EXAMPLE DUMMY DATA
+INSERT INTO users(username, password, profile_pic)
+VALUES
+('bbdog', 'ben', 'https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fme.jpg?v=1569425179160');
+```
+### Affirmation Table
+```SQL
+CREATE TABLE affirmation(
+    affirmation_id SERIAL PRIMARY KEY,
+    goal: VARCHAR(3000),
+    user_id  INTEGER REFERENCES users(id) 
+);
+
+--EXAMPLE OF DUMMY DATA
+INSERT INTO users(goal)
+VALUES
+('Send a text message saying 3 things you love about the one you love.');
+```
+### Gifts Table
+```SQL
+CREATE TABLE gifts(
+    gifts_id SERIAL PRIMARY KEY,
+    goal: VARCHAR(3000),
+    user_id  INTEGER REFERENCES users(id) 
+);
+INSERT INTO users(goal)
+VALUES
+('Go to the store and pick out of their favorite candy, leave it somewhere they can find it.');
+```
+### Time Table
+```SQL
+CREATE TABLE time(
+    time_id SERIAL PRIMARY KEY,
+    goal: VARCHAR(3000),
+    user_id  INTEGER REFERENCES users(id) 
+);
+INSERT INTO users(goal)
+VALUES
+('Participate in one of their hobbies, you might learn something new!');
+```
+### Service Table
+```SQL
+CREATE TABLE service (
+    service_id SERIAL PRIMARY KEY,
+    goal: VARCHAR(3000),
+    user_id  INTEGER REFERENCES users(id) 
+);
+INSERT INTO users(goal)
+VALUES
+('Clean out their car.');
+```
+### Touch Table
+```SQL
+CREATE TABLE touch(
+    touch_id SERIAL PRIMARY KEY,
+    goal: VARCHAR(3000),
+    user_id  INTEGER REFERENCES users(id) 
+);
+INSERT INTO users(goal)
+VALUES
+('Offer to give them a back scratch.');
+```
