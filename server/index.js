@@ -2,11 +2,15 @@ require('dotenv').config();
 const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
+const authCtrl = require('./authController');
 const app = express();
 
 app.use(express.json());
+
+//CONNECTION TO MY SERVER, DATABASE, AND USER SESSION
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
 
+//USER SESSEION BEGINS HERE
 app.use(session({
     resave: false,
     saveUninitialized: true,
@@ -14,8 +18,15 @@ app.use(session({
     secret: SESSION_SECRET
 }))
 
-//endpoints
+//ENDPOINTS
+//Auth:
+app.post('/auth/login', authCtrl.signIn)
+app.post('/auth/register', authCtrl.register)
+app.delete('/auth/logout', authCtrl.logout)
+app.get('/auth/user', authCtrl.getUser)
 
+
+//CONNECTS ME TO MY DATABASE AND SERVER MAKING THE BACKEND FUNCTIONAL
 massive({
     connectionString: CONNECTION_STRING,
     ssl: {
