@@ -1,4 +1,4 @@
-# Devmountain Personal Projects
+# Personal Project
 ## IDEA and USER:
 
 In today’s world there are many dating applications that help you find that special someone, but what about an app to help strengthen that relationship once it has been established? I have decided to design an application called Couple.ly designed for those looking to strengthen their relationship, geared specifically towards married couples or those individuals dating. The application will give user simple ways to serve and love their significant other.
