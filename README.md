@@ -162,8 +162,8 @@ Here I will list my URL, REST methods, and a sample of the data that is being se
 ```SQL
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
-    username VARCHAR(20),
-    password VARCHAR(20),
+    username VARCHAR(50),
+    password VARCHAR(50),
     profile_pic TEXT
 );
 
