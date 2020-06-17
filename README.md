@@ -1,9 +1,9 @@
-# Personal Project
+# Personal Project HeartTaken
 ## IDEA and USER:
 
-In today’s world there are many dating applications that help you find that special someone, but what about an app to help strengthen that relationship once it has been established? I have decided to design an application called Couple.ly designed for those looking to strengthen their relationship, geared specifically towards married couples or those individuals dating. The application will give user simple ways to serve and love their significant other.
+In today’s world there are many dating applications that help you find that special someone, but what about an app to help strengthen that relationship once it has been established? I have decided to design an application called HeartTaken designed for those looking to strengthen their relationship, geared specifically towards married couples or those individuals dating. The application will give user simple ways to serve and love their significant other.
 
-This would be a web application that would allow you as the user to sign in and create an account. From here you can pick a category you want to work on for the day. There will be a total of 5 categories (love languages) to choose from where you can get a suggestion of what to do for the day in that category. I would like to add in the functionality of sending push notifications or emails on ideas you can do to serve your significant other for that day in that specific category as well put for now I just want it marked off in the app itself. Once you have completed that task for the day you can mark it off. Throughout the week as you complete Couple.ly goals it will track what areas you have been working on and fill in a wheel meter for you to see your couple progress. You will also be able to look at your history associated with the progress wheel.
+This would be a web application that would allow you as the user to sign in and create an account. From here you can pick a category you want to work on for the day. There will be a total of 5 categories (love languages) to choose from where you can get a suggestion of what to do for the day in that category. I would like to add in the functionality of sending push notifications or emails on ideas you can do to serve your significant other for that day in that specific category as well put for now I just want it marked off in the app itself. Once you have completed that task for the day you can mark it off. Throughout the week as you complete HeartTaken goals it will track what areas you have been working on and fill in a wheel meter for you to see your couple progress. You will also be able to look at your history associated with the progress wheel.
 
 ## Features:
 <img src = "./pictures/RequirementsDocument.png">
@@ -43,7 +43,7 @@ This would be a web application that would allow you as the user to sign in and 
 <img src = "./pictures/Features Page Couplely.png">
 
 ### About.js (View)
-- This component will just show the user about Couple.ly and how it came to be.
+- This component will just show the user more information about the website HeartTaken and how it came to be.
 <img src = "./pictures/About Page Couplely.png">
 
 ### Contact.js (View)
