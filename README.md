@@ -18,37 +18,37 @@ This would be a web application that would allow you as the user to sign in and 
 
 ### Landing.js (View)
 - This will be the landing page where the user will come when first visiting my website. It will show a navbar with 5 view pages to see, "Features, About, Contact, Register, SignIn." In the center view it will show a nice quote to show the importance of this site with a Sign In button or a register button below. Next, it will have a carousel that will move through the navbar giving a brief explanation into the next clickable view. Then lastly a footer with social media pages and copyright. These last two features along with the navbar will presist in the log in and register components.
-<img src = "./pictures/Landing Page couplely.png">
+<img src = "./pictures/Landing Page.png">
 
 ### SignIn.js (View) 
 - This is the Sign in page where the user will be able to Sign into their already existing account. It will handle authentication along with a "cancel" option if the user wants to terminate signing in. Below is a route to the register page if the user needs to register. 
-<img src = "./pictures/Sign in Page Couplely.png"> 
+<img src = "./pictures/Sign in Page.png"> 
 
 ### Register.js (View)
 - This is the Register page where the user will be able to register a new account and then be redirected back to the login component whos functionality was previously described above. This component will have similar functionality as the one above.
-<img src = "./pictures/Register Page Couplely.png">
+<img src = "./pictures/Register Page.png">
 
 ### Profile.js (View)
 - Once the user is logged in, they will be directed to the profile page where they will be able to view their profile information(username, and profile pic), view the wheel chart of Relationship Goals already completed along with 5 love language buttons that will allow the user to grab a goal for the day in that chosen love language. Once they have completed a goal for the day then they can check it off which will in turn update the wheel. 
 
 - In the example the user has clicked the "Affirmation" button and it now gets a "goal" from the database and populates the text field where is can be checked off. Notice as well a slight change for the navbar as there is no longer a "register" or "sign in" button but a home button. While the "View" image doesnt show it, there will also be a logout button.  
-<img src = "./pictures/Profile Couplely.png">
+<img src = "./pictures/Profile Page.png">
 
 ### UpdateProfile.js (View)
 - The user will access this component view by clicking the profile image in the top right corner once signed in. Here the user will be able to update their username and profile picture after filling in the required field and clicking "Update" or to cancel it by clicking "Cancel." 
-<img src = "./pictures/UpdateProfile Couplely.png">
+<img src = "./pictures/UpdateProfile.png">
 
 ### Features.js (View)
 -  This component is simple in that it will display main features to the application. Along with describing the "Why" of the application. It will help users gain a better purpose of this application and hopefully drawn them into signing up.
-<img src = "./pictures/Features Page Couplely.png">
+<img src = "./pictures/Features Page.png">
 
 ### About.js (View)
 - This component will just show the user about Couple.ly and how it came to be.
-<img src = "./pictures/About Page Couplely.png">
+<img src = "./pictures/About Page.png">
 
 ### Contact.js (View)
 - The contact component will be useful in that it HAS the potential to allow users to send me emails regarding the website’s functionality. If bugs are detected or errors occur on the site this will be helpful in allowing the user to provide some simple feedback. 
-<img src = "./pictures/Contact Page Couplely.png">
+<img src = "./pictures/Contact Page.png">
 
 ## Endpoints
 
