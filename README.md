@@ -58,16 +58,80 @@ Here I will list my URL, REST methods, and a sample of the data that is being se
 
 ### Auth endpoints
 - POST: push a new user to the database. app.post(`/auth/register`)
+    ```javascript
+    Recieve: req.body {
+        username: 'example'
+        password: 'examplepassword'
+    }
+    Send: {
+        username: 'example',
+        profile: 'http://googlePhoto/image.png'
+        userId: 4
+    }
+    ```
 - POST: push an existing user to the database. app.post(`/auth/login`)
+    ```javascript
+    Recieve: req.body {
+        username: 'example'
+        password: 'examplepassword'
+    }
+    Send: {
+        username: 'example',
+        profile: 'http://googlePhoto/image.png'
+        userId: 4
+    }
+    ```
 - GET: this will get the user from the database to login in. app.get(`/api/user`)
+    ```javascript
+    //REFERENCE CODE WRITTEN OUT FOR GET
+    getUser: (req, res) => {
+    if (req.session.user) {
+      res.status(200).send(req.session.user);
+    } else {
+      res.sendStatus(404);
+    }
+  },
+    ```
 - DELETE: Can logout of the website. app.delete(`/api/logout`)
+    ```javascript
+    //REFERENCE CODE WRITTEN OUT FOR DELETE
+  logout: (req, res) => {
+    req.session.destroy();
+    console.log(req.session)
+    res.sendStatus(200);
+  },
+    ```
 - PUT: Can update the username or profile picture. app.put(`/api/user`)
+    ```Javascript
+    //REFERNECE CODE WRITTEN OUT FOR PUT
+  updateProfile: async (req, res) => {
+    const db = req.app.get("db");
+    const { id } = req.params;
+    const { name, img } = req.body;
+
+    let data = await db
+      .update_profile(id, name, img)
+      .catch((error) => res.status(500).send(error));
+
+    res.status(200).send(data);
+  },
+    ```
 
 ### Goals endpoints 
 *Work in Progress...*
 - PUT: The wheel chart will update when the checkbox is clicked. app.put(`/api/goal`)
-- GET: This will get the Goal for the day when the button is clicked. app.put(`/api/goal`)
+    ```Javascript
+
+    ```
+- GET: This will get the Goal for the day when the button is clicked. app.get(`/api/goal`)
+    ```Javascript
+
+    ```
+
 - DELETE: Can logout of the website. app.delete(`/api/logout`)
+    ```Javascript
+
+    ```
 
 
 
