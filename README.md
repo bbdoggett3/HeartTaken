@@ -43,13 +43,10 @@ This would be a web application that would allow you as the user to sign in and 
 <img src = "./pictures/Features Page.png">
 
 ### About.js (View)
-<<<<<<< HEAD
 - This component will just show the user about Couple.ly and how it came to be.
 <img src = "./pictures/About Page.png">
-=======
 - This component will just show the user more information about the website HeartTaken and how it came to be.
 <img src = "./pictures/About Page Couplely.png">
->>>>>>> a7539b11a6a7dbb607f2926ab284d52926254610
 
 ### Contact.js (View)
 - The contact component will be useful in that it HAS the potential to allow users to send me emails regarding the website’s functionality. If bugs are detected or errors occur on the site this will be helpful in allowing the user to provide some simple feedback. 
