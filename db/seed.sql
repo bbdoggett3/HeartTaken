@@ -1,7 +1,7 @@
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
-    username VARCHAR(50),
-    password VARCHAR(50),
+    username VARCHAR2(50),
+    password TEXT,
     profile_pic TEXT
 );
 

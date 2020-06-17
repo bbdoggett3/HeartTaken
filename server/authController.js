@@ -44,6 +44,20 @@ module.exports = {
             }
         }
     },
-    logout: (req, res) => {},
-    getUser: (req, res) => {}
+
+    //LOGOUT THE USER FROM THE SESSION THEY ARE CURRENTLY RUNNING
+    logout: (req, res) => {
+        req.session.destroy();
+        console.log(req.session)
+        res.sendStatus(200)
+    },
+
+    //GET THE USER BACK IF THERE IS ONE LOGGED IN AND ON THE SESSION.
+    getUser: (req, res) => {
+        if(req.session.user){
+            res.status(200).send(req.session.user);
+        }else {
+            res.sendStatus(404);
+        }
+    }
 }

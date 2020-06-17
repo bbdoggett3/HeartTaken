@@ -20,11 +20,12 @@ app.use(session({
 
 //ENDPOINTS
 //Auth:
-app.post('/auth/login', authCtrl.signIn)
 app.post('/auth/register', authCtrl.register)
+app.post('/auth/login', authCtrl.signIn)
 app.delete('/auth/logout', authCtrl.logout)
 app.get('/auth/user', authCtrl.getUser)
 
+//Goal:
 
 //CONNECTS ME TO MY DATABASE AND SERVER MAKING THE BACKEND FUNCTIONAL
 massive({
