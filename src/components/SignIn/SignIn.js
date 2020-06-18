@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Nav from '../Nav/Nav';
+import "./SignIn.css"
 
 class SignIn extends Component {
     constructor() {
@@ -12,6 +14,7 @@ class SignIn extends Component {
     render() {
         return(
             <div>
+                <Nav/>
                 <p>SignIn Component</p>
             </div>
         )

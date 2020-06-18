@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from '../Nav/Nav';
 
 class Register extends Component {
     constructor() {
@@ -12,6 +13,7 @@ class Register extends Component {
     render() {
         return(
             <div>
+                <Nav/>
                 <p>Register Component</p>
             </div>
         )

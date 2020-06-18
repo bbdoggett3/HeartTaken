@@ -43,3 +43,10 @@
     padding-right: 25px;
     padding-bottom: 35px;
 }
+
+hr {
+    height:2px;
+    border-width:0;
+    color:black;
+    background-color:black;
+}
