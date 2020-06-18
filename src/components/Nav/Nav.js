@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
@@ -14,15 +15,15 @@ function Nav() {
 
           <div className="navbar-selection-container">
             <ul className="navbar-selection">
-              <li className="nav-item">Features</li>
+              <Link to="/features"><li className="nav-item">Features</li></Link>
               <li className="nav-item"> |</li>
-              <li className="nav-item">About</li>
+              <Link to="/about"><li className="nav-item">About</li></Link>
               <li className="nav-item"> |</li>
-              <li className="nav-item">Contact</li>
+              <Link to="/contact"><li className="nav-item">Contact</li></Link>
               <li className="nav-item"> |</li>
-              <li className="nav-item">Register</li>
+              <Link to="register"><li className="nav-item">Register</li></Link>
               <li className="nav-item"> |</li>
-              <li className="nav-item">Sign in</li>
+              <Link to="signIn"><li className="nav-item">Sign in</li></Link>
             </ul>
           </div>
         </div>
