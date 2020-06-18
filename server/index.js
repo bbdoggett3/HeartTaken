@@ -27,6 +27,7 @@ app.get('/auth/user', authCtrl.getUser)
 
 //Goal:
 
+
 //CONNECTS ME TO MY DATABASE AND SERVER MAKING THE BACKEND FUNCTIONAL
 massive({
     connectionString: CONNECTION_STRING,
