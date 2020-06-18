@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Nav from "../Nav/Nav";
 import "./SignIn.css";
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class SignIn extends Component {
   constructor() {
@@ -57,13 +57,24 @@ class SignIn extends Component {
               onChange={(event) => this.changeHandler(event)}
             />
             <div className="form-btns">
-              <input className="form-blue-btn" type="submit" value="Sign In" />
-              <input className="form-blue-btn" type="button" value="Cancel" />
+              <input 
+                className="form-blue-btn" 
+                type="submit" 
+                value="Sign In" />
+              <Link to="/">
+              <input
+                className="form-blue-btn"
+                type="button"
+                value="Back"
+              />
+              </Link>
             </div>
             <p>
-          Don't already have an account?{" "}
-          <Link to="/register"><span className="register-btn-landing">Register Here</span></Link>
-        </p>
+              Don't already have an account?{" "}
+              <Link to="/register">
+                <span className="register-btn-landing">Register Here</span>
+              </Link>
+            </p>
           </form>
         </div>
       </div>
