@@ -5,6 +5,13 @@ CREATE TABLE users(
     profile_pic TEXT
 );
 
+CREATE TABLE relationship_goals {
+    --work in progress--
+    id_goals SERIAL PRIMARY KEY,
+    goal_type NUMBER,
+    goal_description TEXT,
+}
+
 --DUMMY DATA BELOW
 INSERT INTO users(username, password, profile_pic)
 VALUES
