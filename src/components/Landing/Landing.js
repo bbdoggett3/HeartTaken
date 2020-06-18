@@ -10,14 +10,8 @@ import Nav from '../Nav/Nav';
 function Landing() {
     return(
         <div>
-            <p>Landing Component</p>
             <Nav />
-            {/* <Features />
-            <About />
-            <Contact />
-            <SignIn />
-            <Register />
-            <Profile /> */}
+            <p>Landing Component</p>
         </div>
     )
 }
