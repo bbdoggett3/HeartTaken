@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.signIn-container {
+    background-color: #f9f9f9;
+    height: 80vh;
+    width: 100vw;
+    border: 2px solid lightgrey;
+}
+
+.signIn-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.page-title-content {
+    color: #f68ECE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signIn-input-box {
+    margin: 15px;
+}
+
+.form-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+
+.form-blue-btn {
+    margin: 15px;
+    background-color: #00c8f8;
+    border: none;
+    color: white;
+    padding: 7px;
+    width: 113px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-btn-landing {
+    color: #00c8f8;
+    text-decoration: none;
+}
