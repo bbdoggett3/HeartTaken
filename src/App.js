@@ -1,12 +1,12 @@
 import React from 'react';
-import Landing from './components/Landing/Landing';
+import routes from './routes';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       HeartTaken
-      <Landing />
+      {routes}
     </div>
   );
 }
