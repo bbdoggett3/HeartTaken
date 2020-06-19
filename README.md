@@ -172,60 +172,45 @@ INSERT INTO users(username, password, profile_pic)
 VALUES
 ('bbdog', 'ben', 'https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fme.jpg?v=1569425179160');
 ```
-### Affirmation Table
+
+### goal_type Table
 ```SQL
-CREATE TABLE affirmation(
-    affirmation_id SERIAL PRIMARY KEY,
-    goal: VARCHAR(3000),
-    user_id  INTEGER REFERENCES users(id) 
+CREATE TABLE goal_type (
+    goal_type_id SERIAL PRIMARY KEY,
+    goal_type VARCHAR(50)
 );
 
---EXAMPLE OF DUMMY DATA
-INSERT INTO users(goal)
+--EXAMPLE DUMMY DATA
+INSERT INTO goal_type(goal_type)
 VALUES
-('Send a text message saying 3 things you love about the one you love.');
+('Affirmation'),
+('Gifts'),
+('Quality Time'),
+('Service'),
+('Touch');
 ```
-### Gifts Table
+
+### relationship_goals Table
 ```SQL
-CREATE TABLE gifts(
-    gifts_id SERIAL PRIMARY KEY,
-    goal: VARCHAR(3000),
-    user_id  INTEGER REFERENCES users(id) 
+CREATE TABLE relationship_goals (
+    goal_id SERIAL PRIMARY KEY,
+    goal_type_id INTEGER REFERENCES goal_type(goal_type_id),
+    goal TEXT
 );
-INSERT INTO users(goal)
-VALUES
-('Go to the store and pick out of their favorite candy, leave it somewhere they can find it.');
-```
-### Time Table
-```SQL
-CREATE TABLE time(
-    time_id SERIAL PRIMARY KEY,
-    goal: VARCHAR(3000),
-    user_id  INTEGER REFERENCES users(id) 
+
+--EXAMPLE DUMMY DATA
+INSERT INTO relationship_goals (
+    goal_type_id,
+    goal
+)VALUES(
+     1,
+    'Leave a letter saying how much you love them.'
 );
-INSERT INTO users(goal)
-VALUES
-('Participate in one of their hobbies, you might learn something new!');
-```
-### Service Table
-```SQL
-CREATE TABLE service (
-    service_id SERIAL PRIMARY KEY,
-    goal: VARCHAR(3000),
-    user_id  INTEGER REFERENCES users(id) 
-);
-INSERT INTO users(goal)
-VALUES
-('Clean out their car.');
-```
-### Touch Table
-```SQL
-CREATE TABLE touch(
-    touch_id SERIAL PRIMARY KEY,
-    goal: VARCHAR(3000),
-    user_id  INTEGER REFERENCES users(id) 
-);
-INSERT INTO users(goal)
-VALUES
-('Offer to give them a back scratch.');
+
+--MORE EXAMPLES OF LOVE GOALS: 
+('Send a text message saying 3 things you love about the one you love.'); --Affirmation
+('Go to the store and pick out of their favorite candy, leave it somewhere they can find it.');--Gifts
+('Participate in one of their hobbies, you might learn something new!');--Time
+('Clean out their car.');--Service
+('Offer to give them a back scratch.');--Touch
 ```
