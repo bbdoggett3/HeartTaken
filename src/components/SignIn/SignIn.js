@@ -3,6 +3,8 @@ import Nav from "../Nav/Nav";
 import "./SignIn.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import { loginUser } from '../../ducks/reducer'
 
 class SignIn extends Component {
   constructor() {
@@ -82,4 +84,6 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+const mapToStateProps =reduxState => reduxState;
+
+export default connect(mapToStateProps, { loginUser })(SignIn);

@@ -3,6 +3,8 @@ import Nav from '../Nav/Nav';
 import './Register.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { loginUser } from '../../ducks/reducer'; 
 
 class Register extends Component {
     constructor() {
@@ -20,7 +22,8 @@ class Register extends Component {
         });
       };
     
-      register = () => {
+      register = (event) => {
+          event.preventDefault();
         const { username, password } = this.state;
         axios
           .post("/auth/register", { username, password })
@@ -29,7 +32,7 @@ class Register extends Component {
             this.props.history.push("/SignIn");
           })
           .catch((error) => {
-            alert(error, "Could not log in");
+            alert(error, "Could not register a user at this time");
           });
       };
 
@@ -41,7 +44,7 @@ class Register extends Component {
             <Nav />
             <div className="register-content">
               <p className="page-title-content">Ready to strengthen your relationship</p>
-              <form className="form-content" onSubmit={this.login}>
+              <form className="form-content" onSubmit={this.register}>
                 <input
                   className="register-input-box"
                   placeholder="Username"
@@ -61,8 +64,7 @@ class Register extends Component {
                 <div className="form-btns">
                   <input 
                     className="form-blue-btn" 
-                    type="button"
-                    onClick={() => this.register()} 
+                    type="submit"
                     value="Register" />
                   <Link to="/">
                   <input
@@ -86,4 +88,6 @@ class Register extends Component {
 
 }
 
-export default Register;
+const MapToStateProps = reduxState => reduxState
+
+export default connect(MapToStateProps, { loginUser })(Register);
