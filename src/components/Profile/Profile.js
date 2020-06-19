@@ -49,6 +49,7 @@ class Profile extends Component {
           <button className="goal-btn">Service</button>
           <button className="goal-btn">Touch</button>
         </div>
+        <button className="logout-btn">Logout</button>
       </div>
     );
   }

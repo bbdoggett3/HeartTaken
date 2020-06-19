@@ -84,3 +84,20 @@
 .goal-btn:hover {
     border: 2px solid #f68ECE;
 }
+
+.logout-btn {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    border: 2px solid #f68ECE;
+    color: white;
+    background-color: #f68ECE;
+    width:130;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    border: 2px solid #00c8f8;
+}
