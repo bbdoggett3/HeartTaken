@@ -3,7 +3,7 @@ import React from 'react';
 function UpdateProfile(props) {
     return(
         <div>
-            <p>UpdateProfile Component</p>
+            <p></p>
         </div>
     )
 }

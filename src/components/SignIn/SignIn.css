@@ -34,9 +34,7 @@
     margin: 15px;
     width:200px;
     height: 25px;
-    border-radius: 3px;
-
-    
+    border-radius: 3px;  
 }
 
 .form-btns {
@@ -50,12 +48,16 @@
 .form-blue-btn {
     margin: 15px;
     background-color: #00c8f8;
-    border: none;
+    border: 2px solid #00c8f8;
     color: white;
     padding: 7px;
     width: 113px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.form-blue-btn:hover {
+    border: 2px solid #f68ECE;
 }
 
 .register-btn-landing {
