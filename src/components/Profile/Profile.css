@@ -25,14 +25,20 @@
     text-align: center;
 }
 
-.paragraph-content {
+.paragraph-content-profile {
     margin-left: auto;
     margin-right: auto;
-    width: 24em;  
+    width: 12em;  
+    font-size: 42px;
 }
 
-.goal-content span {
+.goal-content .pink-span {
     color: #f68ECE;
+    font-weight: bolder; 
+}
+
+.goal-content .blue-span {
+    color: #00c8f8;
     font-weight: bolder; 
 }
 
@@ -56,13 +62,13 @@
     height:35px;
 }
 
-
 .goal-btns-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    margin-top:75px;
 }
 
 .goal-btn {

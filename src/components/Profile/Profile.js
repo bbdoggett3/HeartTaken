@@ -22,9 +22,9 @@ class Profile extends Component {
         <Nav />
         <div className="profile-content">
           <div className="goal-content">
-            <p className="paragraph-content">
-              <span>Username</span>, ready for your HeartTaken Daily Goal? Click
-              a button below to start!
+            <p className="paragraph-content-profile">
+              <span className="pink-span">Username</span>, ready for your HeartTaken Daily Goal? <span className="blue-span">Click
+              a button below to start!</span>
             </p>
             <div className="row-appearance-check-container">
               <p className="goal-populate-box">Your Goal will appear here...</p>
