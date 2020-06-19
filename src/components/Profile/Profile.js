@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UpdateProfile from '../UpdateProfile/UpdateProfile';
+import Nav from '../Nav/Nav';
 
 
 class Profile extends Component {
@@ -18,6 +19,7 @@ class Profile extends Component {
     render() {
         return(
             <div>
+                <Nav/>
                 <p>Profile Component</p>
                 <UpdateProfile 
                     username = {this.state.username}

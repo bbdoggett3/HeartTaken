@@ -31,7 +31,7 @@ class SignIn extends Component {
         this.props.loginUser(res.data);
         this.props.history.push("/profile");
       })
-      .catch((error) => console.log(error, "Could Not log in at this time"));
+      .catch((error) => alert(error, "Sorry, Username or Password incorrect"));
   };
 
   render() {

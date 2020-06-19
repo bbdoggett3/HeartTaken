@@ -8,7 +8,7 @@ module.exports = {
 
     const existingUser = await db.check_user_for_login(username);
     if (existingUser[0]) {
-      return status(409).send("Username is already taken");
+      return res.status(409).send("Username is already taken");
     }
 
     const salt = bcrypt.genSaltSync(10);
@@ -30,7 +30,7 @@ module.exports = {
 
     const user = await db.check_user_for_login(username);
     if (!user[0]) {
-      return status(400).send("User does not exists");
+      return res.status(400).send("User does not exists");
     } else {
       const authenticated = bcrypt.compareSync(password, user[0].password);
       if (authenticated) {
