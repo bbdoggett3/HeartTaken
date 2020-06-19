@@ -21,10 +21,16 @@ class Profile extends Component {
       <div className="profile-container">
         <Nav />
         <div className="profile-content">
-            <div className="goal-content">
-            <p>Profile Component</p>
-            <p>test</p>
+          <div className="goal-content">
+            <p className="paragraph-content">
+              <span>Username</span>, ready for your HeartTaken Daily Goal? Click
+              a button below to start!
+            </p>
+            <div className="row-appearance-check-container">
+              <p className="goal-populate-box">Your Goal will appear here...</p>
+              <input className="checkbox-btn" type="checkbox"/>
             </div>
+          </div>
           <p>*WheelChart Here*</p>
 
           <UpdateProfile
@@ -34,11 +40,11 @@ class Profile extends Component {
           />
         </div>
         <div className="goal-btns-container">
-        <button className="goal-btn">Affirmation</button>
-            <button className="goal-btn">Gifts</button>
-            <button className="goal-btn">Quality Time</button>
-            <button className="goal-btn">Service</button>
-            <button className="goal-btn">Touch</button>
+          <button className="goal-btn">Affirmation</button>
+          <button className="goal-btn">Gifts</button>
+          <button className="goal-btn">Quality Time</button>
+          <button className="goal-btn">Service</button>
+          <button className="goal-btn">Touch</button>
         </div>
       </div>
     );

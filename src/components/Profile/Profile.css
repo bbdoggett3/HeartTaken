@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .profile-container {
     background-color: #f9f9f9;
     height: 80vh;
@@ -18,7 +20,42 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
+
+.paragraph-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 24em;  
+}
+
+.goal-content span {
+    color: #f68ECE;
+    font-weight: bolder; 
+}
+
+.row-appearance-check-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.goal-populate-box {
+    border: 1px solid black;
+    padding: 7px;
+    width: 45vw;
+    border-radius: 3px; 
+}
+
+.checkbox-btn {
+    width: 35px;
+    height:35px;
+}
+
 
 .goal-btns-container {
     display: flex;
