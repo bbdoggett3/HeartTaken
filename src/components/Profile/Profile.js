@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Profile.css";
 import UpdateProfile from "../UpdateProfile/UpdateProfile";
 import Nav from "../Nav/Nav";
+import { connect } from "react-redux";
+import { logoutUser } from "../../ducks/reducer";
 
 class Profile extends Component {
   constructor() {
@@ -23,12 +25,13 @@ class Profile extends Component {
         <div className="profile-content">
           <div className="goal-content">
             <p className="paragraph-content-profile">
-              <span className="pink-span">Username</span>, ready for your HeartTaken Daily Goal? <span className="blue-span">Click
-              a button below to start!</span>
+              <span className="pink-span">{this.props.username}</span>, ready
+              for your HeartTaken Daily Goal?{" "}
+              <span className="blue-span">Click a button below to start!</span>
             </p>
             <div className="row-appearance-check-container">
               <p className="goal-populate-box">Your Goal will appear here...</p>
-              <input className="checkbox-btn" type="checkbox"/>
+              <input className="checkbox-btn" type="checkbox" />
             </div>
           </div>
           <p>*WheelChart Here*</p>
@@ -51,4 +54,6 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+const mapToStateProps = (reduxState) => reduxState;
+
+export default connect(mapToStateProps, { logoutUser })(Profile);

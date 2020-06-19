@@ -3,7 +3,8 @@ import axios from 'axios';
 const initialState = {
     id: null,
     username: "",
-    password: "", isLoggedIn: false
+    password: "", 
+    isLoggedIn: false
 }
 
 //ACTION

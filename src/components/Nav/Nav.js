@@ -1,8 +1,11 @@
 import React from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
-function Nav() {
+
+function Nav(props) {
+
   return (
     <div className="page-top">
       <nav className="navbar-container">
@@ -21,9 +24,13 @@ function Nav() {
               <li className="nav-item"> |</li>
               <Link to="/contact"><li className="nav-item">Contact</li></Link>
               <li className="nav-item"> |</li>
-              <Link to="register"><li className="nav-item">Register</li></Link>
+              {props.isLoggedIn
+              ? <Link to="/"><li className="nav-item">Home</li></Link>
+              : <Link to="register"><li className="nav-item">Register</li></Link>}
               <li className="nav-item"> |</li>
-              <Link to="signIn"><li className="nav-item">Sign in</li></Link>
+              {props.isLoggedIn
+              ? <Link to="profileUpdate"><li className="nav-item"><img  className="nav-profile-pic" src="https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fme.jpg?v=1569425179160" alt="profile"/></li></Link>
+              : <Link to="signIn"><li className="nav-item">Sign in</li></Link> }
             </ul>
           </div>
         </div>
@@ -33,4 +40,6 @@ function Nav() {
   );
 }
 
-export default Nav;
+const mapToStateProps = reduxState => reduxState
+
+export default connect(mapToStateProps)(Nav);

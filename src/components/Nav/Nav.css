@@ -44,6 +44,15 @@
     padding-bottom: 35px;
 }
 
+.nav-profile-pic {
+    width:40px;
+    height:40px;
+}
+
+.nav-profile-pic:hover {
+    opacity: 0.5;
+}
+
 hr {
     height:2px;
     border-width:0;
