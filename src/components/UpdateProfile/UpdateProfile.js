@@ -3,6 +3,7 @@ import Nav from "../Nav/Nav";
 import "./UpdateProfile.css";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { updateUser } from '../../ducks/reducer';
 import axios from "axios";
 
 class UpdateProfile extends Component {
@@ -57,7 +58,7 @@ class UpdateProfile extends Component {
           ref={fileInput => this.fileInput = fileInput}/>
           <form className="update-form-content" onSubmit={this.updateProfile}>   
               <img  onClick={() => this.fileInput.click()} className="update-profile-pic" src={this.props.profile_pic} alt="profile"/>
-        {/* This is the user inpur fields to update their profile */}
+        {/* This is the user input fields to update their profile */}
             <input
               className="update-input-box"
               placeholder={this.props.username}
@@ -98,4 +99,4 @@ class UpdateProfile extends Component {
 
 const mapToStateProps = (reduxState) => reduxState;
 
-export default connect(mapToStateProps)(UpdateProfile);
+export default connect(mapToStateProps, {updateUser})(UpdateProfile);
