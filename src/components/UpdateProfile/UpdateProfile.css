@@ -39,6 +39,13 @@
     cursor: pointer;
 }
 
+.file-btn {
+    margin:10px;
+    color:white;
+    background-color: #00c8f8;
+    /* border: 2px solid #00c8f8; */
+}
+
 .update-input-box {
     border: 2px solid lightgrey;
     margin: 15px;

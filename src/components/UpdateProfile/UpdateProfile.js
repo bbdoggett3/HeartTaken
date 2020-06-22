@@ -3,6 +3,7 @@ import Nav from "../Nav/Nav";
 import "./UpdateProfile.css";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 class UpdateProfile extends Component {
     constructor() {
@@ -10,8 +11,21 @@ class UpdateProfile extends Component {
 
         this.state = {
             username: "",
-            image: ""
+            profile_pic: ""
         }
+    }
+
+    filesSelectedHandler = (event) => {
+        console.log(event.target.files[0])
+        this.setState({profile_pic: this.props.profile_pic})
+        // const data = new FormData();
+        // data.append('file', event.target.files[0]);
+        // data.append('name', 'some value user types');
+        // data.append('description', 'some value user types');
+        // // '/files' is your node.js route that triggers our middleware
+        // axios.post('/files', data).then((response) => {
+        //   console.log(response); // do something with the response
+        // });
     }
 
     changeHandler = (event) => {
@@ -20,8 +34,14 @@ class UpdateProfile extends Component {
         });
       };
 
-      update = () => {
-        
+    updateProfile = (id) => {
+        const {username, profile_pic} = this.props
+        const body = {username, profile_pic}
+
+        axios.put(`/auth/update/${id}`, body)
+        .then(res => {
+            this.props.updateUser(res.data);
+        }).catch((error) => alert(error, "Could not update profile at this time"))
       }
 
   render() {
@@ -32,9 +52,12 @@ class UpdateProfile extends Component {
         <Nav />
         <div className="updateProfile-content">
           <p className="update-title-content">Update Profile</p>
-          {/* MAKE SURE TO ADD THE UPDATE ON SUBMIT BELOW ON LINE 36 REFER TO OTHER CODE */}
-          <form className="update-form-content">   
-              <img className="update-profile-pic" src="https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fme.jpg?v=1569425179160" alt="profile"/>
+        {/* This is where I can update my profile pic */}
+          <input style={{display:"none"}} className="file-btn"type="file" onChange={this.filesSelectedHandler}
+          ref={fileInput => this.fileInput = fileInput}/>
+          <form className="update-form-content" onSubmit={this.updateProfile}>   
+              <img  onClick={() => this.fileInput.click()} className="update-profile-pic" src={this.props.profile_pic} alt="profile"/>
+        {/* This is the user inpur fields to update their profile */}
             <input
               className="update-input-box"
               placeholder={this.props.username}
@@ -51,6 +74,7 @@ class UpdateProfile extends Component {
             //   value={username}
               onChange={(event) => this.changeHandler(event)}
             />
+        {/* This is where the buttons are clicked in order to update the user */}
             <div className="update-form-btns">
               <input
                 className="update-form-blue-btn"

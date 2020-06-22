@@ -29,7 +29,7 @@ function Nav(props) {
               : <Link to="/register"><li className="nav-item">Register</li></Link>}
               <li className="nav-item"> |</li>
               {props.isLoggedIn
-              ? <Link to="/updateProfile"><li className="nav-item"><img  className="nav-profile-pic" src="https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fme.jpg?v=1569425179160" alt="profile"/></li></Link>
+              ? <Link to="/updateProfile"><li className="nav-item"><img  className="nav-profile-pic" src={props.profile_pic} alt="profile"/></li></Link>
               : <Link to="/signIn"><li className="nav-item">Sign in</li></Link> }
             </ul>
           </div>

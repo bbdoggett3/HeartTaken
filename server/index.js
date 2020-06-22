@@ -24,6 +24,7 @@ app.post('/auth/register', authCtrl.register)
 app.post('/auth/login', authCtrl.signIn)
 app.delete('/auth/logout', authCtrl.logout)
 app.get('/auth/user', authCtrl.getUser)
+app.put('/auth/update/:id', authCtrl.updateUser)
 
 //Goal:
 

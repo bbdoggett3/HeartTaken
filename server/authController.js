@@ -60,4 +60,16 @@ module.exports = {
       res.sendStatus(404);
     }
   },
+
+  //UPDATE THE USER THAT IS LOGGED IN
+  updateUser: async(req, res) => {
+    const db = req.app.get('db')
+    const {id} = req.params
+    const {username, profile_pic} = req.body
+
+    let userData = await db.update_user(id, username, profile_pic)
+    .catch((error) => res.status(500).send(error));
+
+    res.status(200).send(userData);
+  }
 };
