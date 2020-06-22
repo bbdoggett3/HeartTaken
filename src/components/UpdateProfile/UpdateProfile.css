@@ -34,6 +34,11 @@
     height: 200px;
 }
 
+.update-profile-pic:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 .update-input-box {
     border: 2px solid lightgrey;
     margin: 15px;
