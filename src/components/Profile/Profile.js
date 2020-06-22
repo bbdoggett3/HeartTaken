@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Profile.css";
-import UpdateProfile from "../UpdateProfile/UpdateProfile";
 import Nav from "../Nav/Nav";
 import { connect } from "react-redux";
 import { logoutUser } from "../../ducks/reducer";
@@ -45,12 +44,6 @@ class Profile extends Component {
             </div>
           </div>
           <p>*WheelChart Here*</p>
-
-          <UpdateProfile
-            username={this.state.username}
-            password={this.state.password}
-            profilePic={this.state.profilePic}
-          />
         </div>
         <div className="goal-btns-container">
           <button className="goal-btn">Affirmation</button>
