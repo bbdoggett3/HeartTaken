@@ -4,6 +4,7 @@ import UpdateProfile from "../UpdateProfile/UpdateProfile";
 import Nav from "../Nav/Nav";
 import { connect } from "react-redux";
 import { logoutUser } from "../../ducks/reducer";
+import axios from "axios";
 
 class Profile extends Component {
   constructor() {
@@ -18,6 +19,15 @@ class Profile extends Component {
       wheelChart: "",
     };
   }
+
+  logout = () => {
+    axios.delete("/auth/logout").then(() => {
+      console.log(this.props);
+      this.props.logoutUser();
+      this.props.history.push("/");
+    });
+  };
+
   render() {
     return (
       <div className="profile-container">
@@ -49,7 +59,9 @@ class Profile extends Component {
           <button className="goal-btn">Service</button>
           <button className="goal-btn">Touch</button>
         </div>
-        <button className="logout-btn">Logout</button>
+        <button onClick={() => this.logout()} className="logout-btn">
+          Logout
+        </button>
       </div>
     );
   }
