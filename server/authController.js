@@ -1,9 +1,17 @@
 const bcrypt = require("bcrypt");
 
+// const email = {
+//   from: "hearttakendev@gmail.com",
+//   to: "",
+//   subject: "Welcome to HeartTaken",
+//   text: "We are excited for you too begin strenghtening your relationship today!"
+// }
+
 module.exports = {
   //REGISTER THE USER HERE-BACKEND
   register: async (req, res) => {
     const db = req.app.get("db");
+    // const transporter = req.app.get('tp')
     const { username, password } = req.body;
 
     const existingUser = await db.check_user_for_login(username);
@@ -15,6 +23,16 @@ module.exports = {
     const hash = bcrypt.hashSync(password, salt);
 
     const newUser = await db.register_user([username, hash]);
+    // delete newUser[0].password
+
+    // const emailInfo = {...email, to: email}
+    // transporter.sendMail(emailInfo, (error, data) => {
+    //   if (error) {
+    //     console.log(error)
+    //   }else {
+    //     console.log("Email was sent to the user.")
+    //   }
+    // } )
 
     req.session.user = {
       userId: newUser[0].id,
