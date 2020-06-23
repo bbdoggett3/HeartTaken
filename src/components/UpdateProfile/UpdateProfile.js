@@ -67,13 +67,12 @@ class UpdateProfile extends Component {
               alt="profile"
             />
             {/* This is the user input fields to update their profile */}
-            <p>{this.props.username}</p>
+            <p className="user-current-name">Current Username: <span>{this.props.username}</span></p>
             <input
               className="update-input-box"
               placeholder="New Username"
               type="text"
               name="username"
-              value={username}
               onChange={(event) => this.changeHandler(event)}
             />
 

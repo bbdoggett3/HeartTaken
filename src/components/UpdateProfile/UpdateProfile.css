@@ -39,6 +39,17 @@
     cursor: pointer;
 }
 
+.user-current-name {
+    color: #f68ECE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.user-current-name span {
+    color: #00c8f8;
+}
+
 .file-btn {
     margin:10px;
     color:white;
