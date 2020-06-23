@@ -37,6 +37,7 @@ module.exports = {
         req.session.user = {
           userId: user[0].id,
           username: user[0].username,
+          profile_pic: user[0].profile_pic
         };
         res.status(200).send(req.session.user);
       } else {
@@ -70,6 +71,13 @@ module.exports = {
     let userData = await db.update_user(id, username, profile_pic)
     .catch((error) => res.status(500).send(error));
 
-    res.status(200).send(userData);
+    req.session.user = {
+      id: userData[0].id,
+      username: userData[0].username,
+      profile_pic: userData[0].profile_pic
+    }
+
+    console.log(userData[0])
+    res.status(200).send(req.session.user);
   }
 };

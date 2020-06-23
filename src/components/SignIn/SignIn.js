@@ -28,6 +28,7 @@ class SignIn extends Component {
     axios
       .post("/auth/login", { username, password })
       .then((res) => {
+        console.log(res.data)
         this.props.loginUser(res.data);
         this.props.history.push("/profile");
       })

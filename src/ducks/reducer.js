@@ -15,12 +15,13 @@ const GET_USER = 'GET_USER';
 const UPDATE_USER = 'UPDATE_USER';
 
 //ACTION CREATORS (FUNCTIONS)
-export function loginUser({userId, username}) {
+export function loginUser({userId, username, profile_pic}) {
     return {
         type: LOGIN_USER,
         payload: {
             id: userId,
-            username
+            username,
+            profile_pic
         }
     }
 }
@@ -40,11 +41,11 @@ export function getuser() {
     }
 }
 
-export function updateUser({userId, username, profile_pic}) {
+export function updateUser({id, username, profile_pic}) {
     return {
         type: UPDATE_USER,
         payload: {
-            id: userId,
+            id,
             username,
             profile_pic
         }
