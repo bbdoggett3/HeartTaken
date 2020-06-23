@@ -43,7 +43,7 @@ class UpdateProfile extends Component {
   };
 
   render() {
-    const { username, profile_pic } = this.state;
+    const { profile_pic } = this.state;
 
     return (
       <div className="updateProfile-container">
