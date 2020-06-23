@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.contact-container {
+    background-color: #f9f9f9;
+    height: 80vh;
+    width: 100vw;
+    border: 2px solid lightgrey;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.contact-title {
+    color: #f68ECE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+}
+
+.contact-paragraph {
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45em;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin:10px;
+
+}
+
+.message-field {
+    margin:5px;
+    height: 8vh;
+    border: 1px solid lightgrey;
+}
+
+.email-field {
+    margin:5px;
+    height: 28px;
+    border: 1px solid lightgrey;
+}
+
+.name-field {
+    margin:5px;
+    height: 28px;
+    border: 1px solid lightgrey;
+}
+
+.contact-send-btn {
+    margin: 5px;
+    background-color: #00c8f8;
+    border: 2px solid #00c8f8;
+    color: white;
+    padding: 7px;
+    width: 113px;
+    border-radius: 4px;
+    cursor: pointer;
+}
