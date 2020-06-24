@@ -19,6 +19,15 @@ class Profile extends Component {
     };
   }
 
+  handleClick = ({currentTarget}) => {
+    console.log(currentTarget.value)
+    axios.get(`/api/goal/${currentTarget.value}`)
+    .then(res => {
+      console.log(res.data);
+      this.setState({dailyGoal: res.data.goal})
+    })
+  }
+
   logout = () => {
     axios.delete("/auth/logout").then(() => {
       console.log(this.props);
@@ -39,18 +48,20 @@ class Profile extends Component {
               <span className="blue-span">Click a button below to start!</span>
             </p>
             <div className="row-appearance-check-container">
-              <p className="goal-populate-box">Your Goal will appear here...</p>
+            {this.state.dailyGoal
+             ? <p className="goal-populate-box">{this.state.dailyGoal}</p>
+             : <p className="goal-populate-box">Goal will appear here...</p>}
               <input className="checkbox-btn" type="checkbox" />
             </div>
           </div>
           <p>*WheelChart Here*</p>
         </div>
         <div className="goal-btns-container">
-          <button className="goal-btn">Affirmation</button>
-          <button className="goal-btn">Gifts</button>
-          <button className="goal-btn">Quality Time</button>
-          <button className="goal-btn">Service</button>
-          <button className="goal-btn">Touch</button>
+          <button value={1} onClick={this.handleClick} className="goal-btn">Affirmation</button>
+          <button value={2} onClick={this.handleClick} className="goal-btn">Gifts</button>
+          <button value={3} onClick={this.handleClick} className="goal-btn">Quality Time</button>
+          <button value={4} onClick={this.handleClick} className="goal-btn">Service</button>
+          <button value={5} onClick={this.handleClick} className="goal-btn">Touch</button>
         </div>
         <button onClick={() => this.logout()} className="logout-btn">
           Logout
