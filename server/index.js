@@ -3,6 +3,7 @@ const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
 const authCtrl = require('./authController');
+const goalCtrl = require('./goalController');
 const app = express();
 // const nodemailer = require('nodemailer');
 
@@ -39,7 +40,7 @@ app.get('/auth/user', authCtrl.getUser)
 app.put('/auth/update/:id', authCtrl.updateUser)
 
 //Goal:
-
+app.get('/api/goal/:goal_type_id', goalCtrl.getGoal)
 
 //CONNECTS ME TO MY DATABASE AND SERVER MAKING THE BACKEND FUNCTIONAL
 massive({
