@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import { connect } from "react-redux";
 import { logoutUser } from "../../ducks/reducer";
 import axios from "axios";
+// import Chart from '../Chart/Chart'
 
 class Profile extends Component {
   constructor() {
