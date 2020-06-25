@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import { connect } from "react-redux";
 import { logoutUser } from "../../ducks/reducer";
 import axios from "axios";
-// import Chart from '../Chart/Chart'
+import Chart from '../Chart/Chart'
 
 class Profile extends Component {
   constructor() {
@@ -51,12 +51,12 @@ class Profile extends Component {
             </p>
             <div className="row-appearance-check-container">
             {this.state.dailyGoal
-             ? <p className="goal-populate-box">{this.state.dailyGoal}</p>
+             ? <p className="goal-populate-box"><span id="goal">{this.state.dailyGoal}</span></p>
              : <p className="goal-populate-box">Goal will appear here...</p>}
               <input className="checkbox-btn" type="checkbox" />
             </div>
           </div>
-          <p>*WheelChart Here*</p>
+          <Chart />
         </div>
         <div className="goal-btns-container">
           <button value={1} onClick={this.handleClick} className="goal-btn">Affirmation</button>

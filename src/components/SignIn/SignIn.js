@@ -34,6 +34,7 @@ class SignIn extends Component {
         this.props.history.push("/profile");
       })
       .catch((error) => alert(error, "Sorry, Username or Password incorrect"));
+      //toast.error("Sorry, Username or Password incorrect")
   };
 
   render() {

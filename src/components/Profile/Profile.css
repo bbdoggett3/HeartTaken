@@ -57,6 +57,11 @@
     border-radius: 3px; 
 }
 
+#goal {
+    color: #00c8f8;
+    font-weight: bolder;
+}
+
 .checkbox-btn {
     width: 35px;
     height:35px;
