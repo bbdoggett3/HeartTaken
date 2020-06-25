@@ -56,7 +56,7 @@ class Profile extends Component {
               <input className="checkbox-btn" type="checkbox" />
             </div>
           </div>
-          <Chart />
+          <Chart dailyGoal={this.state.dailyGoal}/>
         </div>
         <div className="goal-btns-container">
           <button value={1} onClick={this.handleClick} className="goal-btn">Affirmation</button>

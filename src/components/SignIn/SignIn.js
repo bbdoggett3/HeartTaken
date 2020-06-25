@@ -4,8 +4,8 @@ import Footer from "../Footer/Footer";
 import "./SignIn.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { connect } from 'react-redux';
-import { loginUser } from '../../ducks/reducer'
+import { connect } from "react-redux";
+import { loginUser } from "../../ducks/reducer";
 
 class SignIn extends Component {
   constructor() {
@@ -29,12 +29,12 @@ class SignIn extends Component {
     axios
       .post("/auth/login", { username, password })
       .then((res) => {
-        console.log(res.data)
+        console.log(res.data);
         this.props.loginUser(res.data);
         this.props.history.push("/profile");
       })
       .catch((error) => alert(error, "Sorry, Username or Password incorrect"));
-      //toast.error("Sorry, Username or Password incorrect")
+    //toast.error("Sorry, Username or Password incorrect")
   };
 
   render() {
@@ -62,16 +62,9 @@ class SignIn extends Component {
               onChange={(event) => this.changeHandler(event)}
             />
             <div className="form-btns">
-              <input 
-                className="form-blue-btn" 
-                type="submit" 
-                value="Sign In" />
+              <input className="form-blue-btn" type="submit" value="Sign In" />
               <Link to="/">
-              <input
-                className="form-blue-btn"
-                type="button"
-                value="Back"
-              />
+                <input className="form-blue-btn" type="button" value="Back" />
               </Link>
             </div>
             <p>
@@ -88,6 +81,6 @@ class SignIn extends Component {
   }
 }
 
-const mapToStateProps =reduxState => reduxState;
+const mapToStateProps = (reduxState) => reduxState;
 
 export default connect(mapToStateProps, { loginUser })(SignIn);

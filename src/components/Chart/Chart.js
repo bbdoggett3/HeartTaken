@@ -11,13 +11,13 @@ class Chart extends Component {
           labels: ['Affirmation', 'Gifts', 'Quality Time', 'Service', 'Touch'],
               datasets: [
                   {
-                      label: 'Population',
+                      label: 'Love Language Goals',
                       data: [
-                          4,
+                          this.props.dailyGoal,
                           2,
                           2,
                           5,
-                          1
+                          10
                       ],
                       backgroundColor: [
                           'rgba(0, 198, 248, 0.6)',
