@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 import "./UpdateProfile.css";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -93,6 +94,7 @@ class UpdateProfile extends Component {
             </div>
           </form>
         </div>
+        <Footer/>
       </div>
     );
   }

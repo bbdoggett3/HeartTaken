@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../Nav/Nav";
 import "./Features.css";
+import Footer from "../Footer/Footer";
 
 function Features() {
   return (
@@ -39,6 +40,7 @@ function Features() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

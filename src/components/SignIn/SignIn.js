@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 import "./SignIn.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -80,6 +81,7 @@ class SignIn extends Component {
             </p>
           </form>
         </div>
+        <Footer />
       </div>
     );
   }

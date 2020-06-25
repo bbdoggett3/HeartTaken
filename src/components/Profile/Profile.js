@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Profile.css";
 import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 import { connect } from "react-redux";
 import { logoutUser } from "../../ducks/reducer";
 import axios from "axios";
@@ -66,6 +67,7 @@ class Profile extends Component {
         <button onClick={() => this.logout()} className="logout-btn">
           Logout
         </button>
+        <Footer/>
       </div>
     );
   }

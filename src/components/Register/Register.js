@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
+import Footer from "../Footer/Footer";
 import './Register.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -82,6 +83,7 @@ class Register extends Component {
                 </p>
               </form>
             </div>
+            <Footer />
           </div>
         );
       }

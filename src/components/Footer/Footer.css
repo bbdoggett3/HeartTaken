@@ -1,0 +1,40 @@
+.footer-break {
+    width: 100vw;
+    background-color: #eee;
+    color: white;
+    padding: 1px;
+}
+
+.footer-container {
+    background-color: white;
+    padding:22px;
+    margin:2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-icon-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    margin:5px;
+    width: 64px;
+    height:64px;
+}
+
+.social-icon:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.copyright-info {
+    text-align: center;
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+}

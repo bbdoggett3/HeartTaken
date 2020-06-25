@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../Nav/Nav";
 import "./About.css";
+import Footer from "../Footer/Footer";
 
 function About() {
   return (
@@ -30,6 +31,7 @@ function About() {
           the one you love, you will say with confidence your "Heart is Taken."
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

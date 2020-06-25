@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../Nav/Nav";
 import "./Contact.css";
+import Footer from "../Footer/Footer";
 
 function Contact() {
   return (
@@ -34,6 +35,7 @@ function Contact() {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
