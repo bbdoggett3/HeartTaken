@@ -26,7 +26,7 @@ class Profile extends Component {
     axios.get(`/api/goal/${currentTarget.value}`)
     .then(res => {
       console.log(res.data);
-      this.setState({dailyGoal: res.data.goal})
+      this.setState({dailyGoal: res.data, isDone: false})
     })
   }
 
@@ -37,6 +37,15 @@ class Profile extends Component {
       this.props.history.push("/");
     });
   };
+
+  handleCheckBoxClick = () => {
+    if(!this.state.isDone){
+      console.log(this.state.dailyGoal)
+      axios.put(`/api/update/${this.state.dailyGoal.goal_type_id}`)
+      .then(res => this.setState({isDone: !this.state.isDone}))
+      .catch(error => console.log(error))
+    }
+  }
 
   render() {
     return (
@@ -50,13 +59,14 @@ class Profile extends Component {
               <span className="blue-span">Click a button below to start!</span>
             </p>
             <div className="row-appearance-check-container">
-            {this.state.dailyGoal
-             ? <p className="goal-populate-box"><span id="goal">{this.state.dailyGoal}</span></p>
+            {this.state.dailyGoal.goal
+             ? <p className="goal-populate-box"><span id="goal">{this.state.dailyGoal.goal}</span></p>
              : <p className="goal-populate-box">Goal will appear here...</p>}
-              <input className="checkbox-btn" type="checkbox" />
+              <input onClick={this.handleCheckBoxClick} className="checkbox-btn" type="checkbox" />
             </div>
           </div>
-          <Chart dailyGoal={this.state.dailyGoal}/>
+          <Chart dailyGoal={this.state.dailyGoal.goal}
+                  isDone ={this.state.isDone}/>
         </div>
         <div className="goal-btns-container">
           <button value={1} onClick={this.handleClick} className="goal-btn">Affirmation</button>
