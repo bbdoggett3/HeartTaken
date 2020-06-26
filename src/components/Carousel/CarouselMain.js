@@ -36,7 +36,7 @@ class App extends Component {
       slidesToScroll: 1,
       className: "slides",
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 3000,
       pauseOnHover: true,
       cssEase: "linear",
       nextArrow: <ArrowButton />,
