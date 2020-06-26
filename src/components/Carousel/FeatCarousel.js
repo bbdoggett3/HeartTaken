@@ -1,5 +1,6 @@
 import React from "react";
 import "./FeatCarousel.css";
+import {Link} from 'react-router-dom';
 
 
 function Features() {
@@ -25,7 +26,7 @@ function Features() {
             <img className="c-features-heart-img" src="https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fheart.svg?v=1592943440103" alt="heart" />
             <div className="c-features-individual-text">
               <h3>Profile Tracking</h3>
-             <button className="c-learn-more-btn">Learn More</button>
+             <Link to="/features"><button className="c-features-btn">Learn More</button></Link>
             </div>
           </div>
           <div className="c-features-indivdual-row">

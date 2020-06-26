@@ -17,7 +17,7 @@ function ArrowButton(props) {
         display: "block",
         backgroundColor: "#00c8f8",
         borderRadius: "10px",
-        margin: "5px",
+        // margin: "10px",
       }}
       onClick={onClick}
     />
@@ -44,7 +44,6 @@ class App extends Component {
       appendDots: (dots) => (
         <div
           style={{
-            // backgroundColor: "#00c8f8",
             borderRadius: "10px",
             
           }}

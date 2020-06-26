@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactCarousel.css";
+import { Link } from "react-router-dom";
 
 function Contact() {
   return (
@@ -12,7 +13,7 @@ function Contact() {
           application any better, please feel free to let us know. <br/>
           Click the button below to send feedback of our site.
         </p>
-        <button className="c-feedback-btn">Click Here</button>
+        <Link to="/contact"><button className="c-feedback-btn">Click Here</button></Link>
 
       </div>
     </div>
