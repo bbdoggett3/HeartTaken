@@ -54,3 +54,36 @@ INSERT INTO user_relationship(
 (2,3),
 (2,4),
 (2,5);
+
+
+--BELOW IS SOME DATABASE QUERIES I MADE TO INSERT DATA
+-- CREATE TABLE user_relationship (
+--     user_relationship_id SERIAL PRIMARY KEY,
+--     user_id INTEGER REFERENCES users(id),
+--     goal_type_id INTEGER REFERENCES goal_type(goal_type_id),
+--     count INTEGER DEFAULT 0
+-- );
+
+-- INSERT INTO user_relationship(
+--     user_id,
+--     goal_type_id
+-- )VALUES
+-- (2,1),
+-- (2,2),
+-- (2,3),
+-- (2,4),
+-- (2,5);
+
+-- SELECT * FROM user_relationship
+-- WHERE user_id = 2
+-- ORDER BY user_relationship_id ASC;
+
+-- UPDATE user_relationship
+-- SET count = 1
+-- WHERE user_id = 2 AND goal_type_id = 1;
+
+-- SELECT * FROM user_relationship;
+
+-- UPDATE user_relationship
+-- SET count = count + 1
+-- WHERE goal_type_id = $1 AND user_id = $2;

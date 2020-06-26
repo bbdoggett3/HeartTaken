@@ -214,3 +214,24 @@ INSERT INTO relationship_goals (
 ('Clean out their car.');--Service
 ('Offer to give them a back scratch.');--Touch
 ```
+### user_relationship Table
+```SQL
+CREATE TABLE user_relationship (
+    user_relationship_id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    goal_type_id INTEGER REFERENCES goal_type(goal_type_id),
+    count INTEGER DEFAULT 0
+);
+
+--EXAMPLE DUMMY DATA
+INSERT INTO user_relationship(
+    user_id,
+    goal_type_id
+)VALUES
+(2,1),
+(2,2),
+(2,3),
+(2,4),
+(2,5);
+
+```
