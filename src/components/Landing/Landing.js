@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
+import CarouselMain from "../Carousel/CarouselMain";
 import "./Landing.css";
 
 function Landing() {
@@ -27,6 +28,7 @@ function Landing() {
           </Link>
         </p>
       </div>
+      <CarouselMain />
       <Footer/>
     </div>
   );

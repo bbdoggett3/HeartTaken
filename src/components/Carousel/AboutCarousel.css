@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.c-about-container {
+    background-color: white;
+    height: 40vh;
+    width: 91vw;
+}
+
+.c-about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.c-about-title {
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+}
+
+.c-about-paragraph-content {
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 42em;
+}
+
+.c-learn-more-btn {
+    margin: 5px;
+    background-color: #00c8f8;
+    border: 2px solid #00c8f8;
+    color: white;
+    padding: 7px;
+    width: 113px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .learn-more-btn:hover {
+        border: 2px solid #f68ECE;
+  }

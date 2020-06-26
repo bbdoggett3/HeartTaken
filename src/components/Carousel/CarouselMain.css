@@ -1,0 +1,18 @@
+.Carousel-App {
+    text-align: center;
+    background-color: white;
+  }
+  
+  .slider-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-slide {
+    display: block;
+    margin-left: auto;
+    margin: auto;
+    width: 50%;
+  }

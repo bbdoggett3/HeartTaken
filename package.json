@@ -20,7 +20,9 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "redux": "^4.0.5"
+    "react-slick": "^0.26.1",
+    "redux": "^4.0.5",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

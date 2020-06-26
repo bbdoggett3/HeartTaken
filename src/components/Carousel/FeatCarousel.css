@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+.c-features-container {
+  background-color: white;
+  height: 40vh;
+  width: 91vw;
+}
+
+.c-features-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.c-features-title {
+  color: grey;
+  font-family: "Open Sans", sans-serif;
+  font-size: 45px;
+}
+
+.c-features-paragraph-content {
+  color: grey;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 52em;
+}
+
+.c-features-main-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+.c-features-individual-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.c-features-heart-img {
+  width: 20px;
+  height:20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-features-individual-text {
+  color: grey;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12em;
+}
+
+.c-learn-more-btn {
+  margin: 5px;
+  background-color: #00c8f8;
+  border: 2px solid #00c8f8;
+  color: white;
+  padding: 7px;
+  width: 113px;
+  border-radius: 4px;
+  cursor: pointer;
+}
