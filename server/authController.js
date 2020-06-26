@@ -23,6 +23,7 @@ module.exports = {
     const hash = bcrypt.hashSync(password, salt);
 
     const newUser = await db.register_user([username, hash]);
+    await db.register_goals(newUser[0].id)
     // delete newUser[0].password
 
     // const emailInfo = {...email, to: email}

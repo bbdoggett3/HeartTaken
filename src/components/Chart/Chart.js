@@ -13,7 +13,7 @@ class Chart extends Component {
                   {
                       label: 'Love Language Goals',
                       data: [
-                          this.props.dailyGoal,
+                          1,
                           2,
                           2,
                           5,

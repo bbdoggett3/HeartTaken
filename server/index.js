@@ -41,6 +41,7 @@ app.put('/auth/update/:id', authCtrl.updateUser)
 
 //Goal:
 app.get('/api/goal/:goal_type_id', goalCtrl.getGoal)
+app.get('/api/progress', goalCtrl.goalProgress)
 
 //CONNECTS ME TO MY DATABASE AND SERVER MAKING THE BACKEND FUNCTIONAL
 massive({

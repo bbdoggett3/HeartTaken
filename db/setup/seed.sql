@@ -17,6 +17,13 @@ CREATE TABLE relationship_goals (
     goal TEXT
 );
 
+CREATE TABLE user_relationship (
+    user_relationship_id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    goal_type_id INTEGER REFERENCES goal_type(goal_type_id),
+    count INTEGER DEFAULT 0
+);
+
 --DUMMY DATA BELOW
 INSERT INTO users(username, password, profile_pic)
 VALUES
@@ -37,3 +44,13 @@ INSERT INTO relationship_goals (
      1,
     'Leave a letter saying how much you love them.'
 );
+
+INSERT INTO user_relationship(
+    user_id,
+    goal_type_id
+)VALUES
+(2,1),
+(2,2),
+(2,3),
+(2,4),
+(2,5);
