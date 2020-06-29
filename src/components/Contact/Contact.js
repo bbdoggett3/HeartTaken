@@ -59,8 +59,8 @@ const Contact = props => {
           </div>
         </form>
       </div>
-      <ToastContainer autoClose={2000}/>
       <Footer />
+      <ToastContainer autoClose={2000}/>
     </div>
   );
 }

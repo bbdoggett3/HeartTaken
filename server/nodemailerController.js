@@ -5,7 +5,6 @@ const { SERVER_EMAIL, SERVER_PASSWORD, TO_EMAIL } = process.env;
 
 const sendEmail = (req, res) => {
   const { message, email, name, } = req.body;
-//   const email = email;
 
   let transporter = nodemailer.createTransport({
     service: "gmail",
