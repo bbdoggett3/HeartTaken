@@ -8,29 +8,7 @@ class Chart extends Component {
 
     this.state = {
         // chartData: this.props.chartData
-        chartData: {
-          labels: ['Affirmation', 'Gifts', 'Quality Time', 'Service', 'Touch'],
-              datasets: [
-                  {
-                      label: 'Love Language Goals',
-                      data: [
-                          1,
-                          1,
-                          1,
-                          1,
-                          1
-                      ],
-                      backgroundColor: [
-                          'rgba(0, 198, 248, 0.6)',
-                          'rgba(0, 155, 245, 0.6)',
-                          'rgba(246, 142, 206, 0.6)',
-                          'rgba(230, 85, 174, 0.6)',
-                          'rgba(255, 10, 160, 0.6)'
-                      ],
-                      
-                  }
-              ]
-        }
+        chartData: {}
     };
   }
 
@@ -44,11 +22,15 @@ class Chart extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.setState({chartData: {} })
+  }
+
   getData = () => {
     axios.get('/api/progress')
     .then((res) => {
+      console.log(res)
       this.setState({
-        // chartData: this.props.chartData
         chartData: {
           labels: ['Affirmation', 'Gifts', 'Quality Time', 'Service', 'Touch'],
               datasets: [

@@ -14,6 +14,7 @@ module.exports = {
     goalProgress: (req, res) => {
         const db = req.app.get("db")
 
+        console.log(req.session.user.userId)
         db.progress_goals(req.session.user.userId)
         .then((progress) => res.status(200).send(progress))
         .catch((error) => {

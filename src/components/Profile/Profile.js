@@ -42,7 +42,7 @@ class Profile extends Component {
     if(!this.state.isDone){
       console.log(this.state.dailyGoal)
       axios.put(`/api/update/${this.state.dailyGoal.goal_type_id}`)
-      .then(res => this.setState({isDone: !this.state.isDone}))
+      .then(res => this.setState({isDone: !this.state.isDone, dailyGoal: ""}))
       .catch(error => console.log(error))
     }
   }

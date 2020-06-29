@@ -24,7 +24,7 @@ module.exports = {
 
     const newUser = await db.register_user([username, hash]);
     await db.register_goals(newUser[0].id)
-    // delete newUser[0].password
+    delete newUser[0].password
 
     // const emailInfo = {...email, to: email}
     // transporter.sendMail(emailInfo, (error, data) => {
@@ -91,7 +91,7 @@ module.exports = {
     .catch((error) => res.status(500).send(error));
 
     req.session.user = {
-      id: userData[0].id,
+      userId: userData[0].id,
       username: userData[0].username,
       profile_pic: userData[0].profile_pic
     }
