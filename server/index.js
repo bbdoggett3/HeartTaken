@@ -5,6 +5,7 @@ const session = require('express-session');
 const authCtrl = require('./authController');
 const goalCtrl = require('./goalController');
 const app = express();
+const nodemailerCtrl = require('./nodemailerController');
 // const nodemailer = require('nodemailer');
 
 app.use(express.json());
@@ -12,7 +13,7 @@ app.use(express.json());
 //CONNECTION TO MY SERVER, DATABASE, AND USER SESSION
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET, SERVER_EMAIL, SERVER_PASSWORD} = process.env
 
-//TRANSPORTER EMAIL/ NODEMAILER
+// TRANSPORTER EMAIL/ NODEMAILER
 // const transporter = nodemailer.createTransport({
 //     service: "gmail",
 //     auth: {
@@ -43,6 +44,9 @@ app.put('/auth/update/:id', authCtrl.updateUser)
 app.get('/api/goal/:goal_type_id', goalCtrl.getGoal)
 app.get('/api/progress', goalCtrl.goalProgress)
 app.put('/api/update/:goal_type_id', goalCtrl.updateGoal)
+
+//Nodemailer:
+app.post('/api/mail', nodemailerCtrl.sendEmail)
 
 //CONNECTS ME TO MY DATABASE AND SERVER MAKING THE BACKEND FUNCTIONAL
 massive({

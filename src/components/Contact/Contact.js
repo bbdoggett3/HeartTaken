@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import Nav from "../Nav/Nav";
 import "./Contact.css";
 import Footer from "../Footer/Footer";
+import axios from "axios"
+import { ToastContainer, toast } from "react-toastify";
 
-function Contact() {
+const Contact = props => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <div className="contact-container">
       <Nav />
@@ -15,26 +21,45 @@ function Contact() {
           application any better, please feel free to let us know.
         </p>
         <form className="contact-form-container">
-          <input className="message-field" 
+          <input onChange={event => {
+            setMessage(event.target.value)
+          }}
+                 className="message-field" 
                  placeholder="Message"
-                 name="message"
-                 type="text"
+                 vaule={message}
+                //  type="text"
                  />
           <div>
-            <input className="email-field" 
+            <input onChange={event => {
+              setEmail(event.target.value)
+          }}
+                   className="email-field" 
                    placeholder="Email Address"
-                   name="email"
-                   type="email"
+                   vaule={email}
+                  //  type="email"
                    />
-            <input className="name-field" 
+            <input onChange={event => {
+              setName(event.target.value)
+            }}
+                   className="name-field" 
                    placeholder="Full Name"
-                   name="fullname" 
+                   value={name} 
                    type="text"
                    />
-            <button className="contact-send-btn">Send</button>
+            <button
+                   variant="Success"
+                   onClick={() => {
+                     axios.post('/api/mail', {name, email, message})
+                     toast.success("Feedback Sent", { position: toast.POSITION.BOTTOM_RIGHT})
+                     setEmail("");
+                     setName("");
+                     setMessage("");
+                   }} 
+                   className="contact-send-btn">Send</button>
           </div>
         </form>
       </div>
+      <ToastContainer autoClose={2000}/>
       <Footer />
     </div>
   );

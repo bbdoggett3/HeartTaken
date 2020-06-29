@@ -60,7 +60,13 @@ class Chart extends Component {
 
   render() {
     return (
-      <div className="chart">
+      <div className="chart"
+            style={{
+              height:"350px",
+              width: "350px",
+              padding: "10px",
+              marginTop: "35px",
+            }}>
         <Pie
           data={this.state.chartData}
           options={{maintainAspectRatio: false}}
