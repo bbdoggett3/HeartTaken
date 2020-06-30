@@ -60,52 +60,6 @@ function Nav(props) {
               )}
             </ul>
           </div>
-
-          {/* NAVBAR SECTION */}
-          <button className="button-appear"> {/*onClick={this.toggleMenuSelect} */}
-            Menu{" "}
-          </button>
-          <div className="mobile-navbar-selection-container">
-            <ul className="mobile-navbar-selection">
-              <Link to="/features">
-                <li className="mobile-nav-item">Features</li>
-              </Link>
-              <li className="mobile-nav-item"> |</li>
-              <Link to="/about">
-                <li className="mobile-nav-item">About</li>
-              </Link>
-              <li className="mobile-nav-item"> |</li>
-              <Link to="/contact">
-                <li className="mobile-nav-item">Contact</li>
-              </Link>
-              <li className="mobile-nav-item"> |</li>
-              {props.isLoggedIn ? (
-                <Link to="/">
-                  <li className="mobile-nav-item">Home</li>
-                </Link>
-              ) : (
-                <Link to="/register">
-                  <li className="mobile-nav-item">Register</li>
-                </Link>
-              )}
-              <li className="mobile-nav-item"> |</li>
-              {props.isLoggedIn ? (
-                <Link to="/updateProfile">
-                  <li className="mobile-nav-item">
-                    <img
-                      className="mobile-nav-profile-pic"
-                      src={props.profile_pic}
-                      alt="profile"
-                    />
-                  </li>
-                </Link>
-              ) : (
-                <Link to="/signIn">
-                  <li className="mobile.nav-item">Sign in</li>
-                </Link>
-              )}
-            </ul>
-          </div>
         </div>
       </nav>
       <hr />
