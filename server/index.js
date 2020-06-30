@@ -6,23 +6,11 @@ const authCtrl = require('./authController');
 const goalCtrl = require('./goalController');
 const app = express();
 const nodemailerCtrl = require('./nodemailerController');
-// const nodemailer = require('nodemailer');
 
 app.use(express.json());
 
 //CONNECTION TO MY SERVER, DATABASE, AND USER SESSION
-const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET, SERVER_EMAIL, SERVER_PASSWORD} = process.env
-
-// TRANSPORTER EMAIL/ NODEMAILER
-// const transporter = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//       user: SERVER_EMAIL,
-//       pass: SERVER_PASSWORD
-//     }
-//   })
-
-//   app.set('tp', transporter)
+const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
 
 //USER SESSEION BEGINS HERE
 app.use(session({
