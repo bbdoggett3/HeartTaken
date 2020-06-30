@@ -31,7 +31,7 @@ const Contact = (props) => {
               className="message-field"
               placeholder="Message"
               value={message}
-              //  type="text"
+
             />
             <div>
               <input
@@ -41,7 +41,7 @@ const Contact = (props) => {
                 className="email-field"
                 placeholder="Email Address"
                 value={email}
-                //  type="email"
+
               />
               <input
                 onChange={(event) => {
