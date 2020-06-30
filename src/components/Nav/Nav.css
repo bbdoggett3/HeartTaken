@@ -60,3 +60,57 @@ hr {
     color:black;
     background-color:black;
 }
+
+  .button-appear {
+    display: inline-block;
+    position: absolute;
+    top: 33%;
+    height: 45px;
+    width: 95px;
+    right: 35px;
+    border-radius: 7px;
+    background-color: #00c8f8;
+    color: white;
+    border: none;
+   
+  }
+
+.button-appear img {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    float: right;
+}
+
+.mobile-navbar-selection {
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    background-color: #212529;
+    color:white;
+    padding: 0px;
+    height: 0px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    overflow: hidden;
+    transition: all 1s;
+  }
+  
+  .mobile-nav-item-open {
+    height: 20vh;
+  }
+
+@media(max-width: 915px) {
+    .navbar-selection-container {
+        display: none;
+    }
+}
+
+@media(min-width: 914px) {
+    .button-appear {
+        display: none;
+    }
+}

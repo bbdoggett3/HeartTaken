@@ -7,7 +7,10 @@ const goalCtrl = require('./goalController');
 const app = express();
 const nodemailerCtrl = require('./nodemailerController');
 
+app.use(express.static(`${__dirname}/../build`));
+
 app.use(express.json());
+
 
 //CONNECTION TO MY SERVER, DATABASE, AND USER SESSION
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env

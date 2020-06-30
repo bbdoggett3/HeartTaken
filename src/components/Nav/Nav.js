@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
-import { connect } from 'react-redux';
-
+import { connect } from "react-redux";
 
 function Nav(props) {
+  // const [isMobileOpen, setMobileOpen] = useState(false);
 
+  // const toggleMenuSelect = () => {
+  //   setMobileOpen(!setMobileOpen);
+  // };
   return (
     <div className="page-top">
       <nav className="navbar-container">
@@ -18,19 +21,89 @@ function Nav(props) {
 
           <div className="navbar-selection-container">
             <ul className="navbar-selection">
-              <Link to="/features"><li className="nav-item">Features</li></Link>
+              <Link to="/features">
+                <li className="nav-item">Features</li>
+              </Link>
               <li className="nav-item"> |</li>
-              <Link to="/about"><li className="nav-item">About</li></Link>
+              <Link to="/about">
+                <li className="nav-item">About</li>
+              </Link>
               <li className="nav-item"> |</li>
-              <Link to="/contact"><li className="nav-item">Contact</li></Link>
+              <Link to="/contact">
+                <li className="nav-item">Contact</li>
+              </Link>
               <li className="nav-item"> |</li>
-              {props.isLoggedIn
-              ? <Link to="/"><li className="nav-item">Home</li></Link>
-              : <Link to="/register"><li className="nav-item">Register</li></Link>}
+              {props.isLoggedIn ? (
+                <Link to="/">
+                  <li className="nav-item">Home</li>
+                </Link>
+              ) : (
+                <Link to="/register">
+                  <li className="nav-item">Register</li>
+                </Link>
+              )}
               <li className="nav-item"> |</li>
-              {props.isLoggedIn
-              ? <Link to="/updateProfile"><li className="nav-item"><img  className="nav-profile-pic" src={props.profile_pic} alt="profile"/></li></Link>
-              : <Link to="/signIn"><li className="nav-item">Sign in</li></Link> }
+              {props.isLoggedIn ? (
+                <Link to="/updateProfile">
+                  <li className="nav-item">
+                    <img
+                      className="nav-profile-pic"
+                      src={props.profile_pic}
+                      alt="profile"
+                    />
+                  </li>
+                </Link>
+              ) : (
+                <Link to="/signIn">
+                  <li className="nav-item">Sign in</li>
+                </Link>
+              )}
+            </ul>
+          </div>
+
+          {/* NAVBAR SECTION */}
+          <button className="button-appear"> {/*onClick={this.toggleMenuSelect} */}
+            Menu{" "}
+          </button>
+          <div className="mobile-navbar-selection-container">
+            <ul className="mobile-navbar-selection">
+              <Link to="/features">
+                <li className="mobile-nav-item">Features</li>
+              </Link>
+              <li className="mobile-nav-item"> |</li>
+              <Link to="/about">
+                <li className="mobile-nav-item">About</li>
+              </Link>
+              <li className="mobile-nav-item"> |</li>
+              <Link to="/contact">
+                <li className="mobile-nav-item">Contact</li>
+              </Link>
+              <li className="mobile-nav-item"> |</li>
+              {props.isLoggedIn ? (
+                <Link to="/">
+                  <li className="mobile-nav-item">Home</li>
+                </Link>
+              ) : (
+                <Link to="/register">
+                  <li className="mobile-nav-item">Register</li>
+                </Link>
+              )}
+              <li className="mobile-nav-item"> |</li>
+              {props.isLoggedIn ? (
+                <Link to="/updateProfile">
+                  <li className="mobile-nav-item">
+                    <img
+                      className="mobile-nav-profile-pic"
+                      src={props.profile_pic}
+                      alt="profile"
+                    />
+                  </li>
+                </Link>
+              ) : (
+                <Link to="/signIn">
+                  <li className="mobile.nav-item">Sign in</li>
+                </Link>
+              )}
             </ul>
           </div>
         </div>
@@ -40,6 +113,6 @@ function Nav(props) {
   );
 }
 
-const mapToStateProps = reduxState => reduxState
+const mapToStateProps = (reduxState) => reduxState;
 
 export default connect(mapToStateProps)(Nav);
