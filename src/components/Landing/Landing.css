@@ -60,3 +60,17 @@
     color: #00c8f8;
     text-decoration: none;
 }
+
+@media(max-width: 690px) {
+
+    .landing-container {
+        height: 100vh;
+    }
+    .page-title-content {
+        font-size: 35px;
+    }
+
+    .paragraph-content {
+        width: 22em;
+    }
+}

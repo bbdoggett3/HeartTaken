@@ -43,7 +43,7 @@ class SignIn extends Component {
       <div className="signIn-container">
         <Nav />
         <div className="signIn-content">
-          <p className="page-title-content">Welcome Back!</p>
+          <p className="signIn-page-title-content">Welcome Back!</p>
           <form className="form-content" onSubmit={this.login}>
             <input
               className="signIn-input-box"

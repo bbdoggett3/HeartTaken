@@ -44,7 +44,7 @@ class Register extends Component {
           <div className="register-container">
             <Nav />
             <div className="register-content">
-              <p className="page-title-content">Ready to strengthen your relationship</p>
+              <p className="register-page-title-content">Ready to strengthen your relationship</p>
               <form className="form-content" onSubmit={this.register}>
                 <input
                   className="register-input-box"
