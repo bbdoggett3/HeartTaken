@@ -21,9 +21,9 @@ function Landing() {
         <Link to="/signIn">
           <button className="sign-in-btn">Sign In</button>
         </Link>
-        <p>
+        <p className="dont-have-sentence">
           Don't already have an account?{" "}
-          <Link to="/register">
+          <Link style={{ textDecoration: "none" }} to="/register">
             <span className="register-btn-landing">Register Here</span>
           </Link>
         </p>
