@@ -26,6 +26,7 @@ class Profile extends Component {
     axios.get(`/api/goal/${currentTarget.value}`)
     .then(res => {
       console.log(res.data);
+      // Math.ceil(Math.random() * 10)
       this.setState({dailyGoal: res.data, isDone: false})
     })
   }
