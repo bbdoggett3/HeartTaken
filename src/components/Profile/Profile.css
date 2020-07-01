@@ -106,3 +106,36 @@
 .logout-btn:hover {
     border: 2px solid #00c8f8;
 }
+
+@media(max-width: 825px) {
+
+    .profile-container {
+        height: 100vh;
+        background-color: white;
+        width: 100vw;
+        border: none
+    }
+
+    .paragraph-content-profile {
+        width: 10em;
+        
+    }
+
+    .profile-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .goal-btns-container {
+        flex-direction: column;
+        margin-top:45px;
+        margin: 10px;
+    }
+
+    .goal-btn {
+        margin:5px;
+    }
+
+}
