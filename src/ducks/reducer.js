@@ -4,7 +4,7 @@ const initialState = {
     id: null,
     username: "",
     password: "",
-    profile_pic: "https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fprofile%20placeholder.png?v=1592859805428", 
+    profile_pic: "", 
     isLoggedIn: false
 }
 

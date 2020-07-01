@@ -31,7 +31,7 @@ function Nav(props) {
           {props.isLoggedIn ? (
             <img
               className="profile-img-appear"
-              src={props.profile_pic}
+              src={props.profile_pic || "https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fprofile%20placeholder.png?v=1592859805428"}
               alt="profile"
             />
           ) : null}
@@ -106,7 +106,7 @@ function Nav(props) {
                   <li className="nav-item">
                     <img
                       className="nav-profile-pic"
-                      src={props.profile_pic}
+                      src={props.profile_pic || "https://cdn.glitch.com/875fcc3a-ee91-4d48-806c-d5b121d9c21c%2Fprofile%20placeholder.png?v=1592859805428"}
                       alt="profile"
                     />
                   </li>
