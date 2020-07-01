@@ -28,7 +28,9 @@ function Landing() {
           </Link>
         </p>
       </div>
-      <CarouselMain />
+      <div className="carousel-display">
+        <CarouselMain />
+      </div>
       <Footer/>
     </div>
   );

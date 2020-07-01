@@ -60,7 +60,24 @@
     border: 2px solid #f68ECE;
 }
 
+.dont-have-sentence {
+    color: grey
+}
+
 .register-btn-landing {
     color: #00c8f8;
     text-decoration: none;
+}
+
+.register-btn-landing:hover {
+    text-decoration: underline #f68ECE;
+}
+
+@media(max-width: 790px) {
+    .signIn-container {
+        background-color: white;
+        height: 80vh;
+        width: 100vw;
+        border: none
+      }
 }

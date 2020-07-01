@@ -34,3 +34,23 @@
     margin-right: auto;
     width: 42em;
 }
+
+@media(max-width: 690px) {
+
+    .about-container {
+      background-color: white;
+      height: 80vh;
+      width: 100vw;
+      border: none
+    }
+  
+    .about-title{
+        font-size: 35px;
+        text-align: center;
+    }
+  
+    .about-paragraph-content {
+        width: 20em;
+    }
+  
+  }

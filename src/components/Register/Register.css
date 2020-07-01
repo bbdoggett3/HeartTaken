@@ -34,9 +34,7 @@
     margin: 15px;
     width:200px;
     height: 25px;
-    border-radius: 3px;
-
-    
+    border-radius: 3px;   
 }
 
 .form-btns {
@@ -61,4 +59,24 @@
 .register-btn-landing {
     color: #00c8f8;
     text-decoration: none;
+}
+
+@media(max-width: 790px) {
+
+    .register-container {
+        height: 100vh;
+        background-color: white;
+        width: 100vw;
+        border: none    
+    }
+    
+    .register-page-title-content {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .paragraph-content {
+        width: 22em;
+    }
+
 }

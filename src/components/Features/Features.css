@@ -63,4 +63,26 @@
   width: 12em;
 }
 
+@media(max-width: 870px) {
+  .features-container {
+    background-color: white;
+    height: 80vh;
+    width: 100vw;
+    border: none
+  }
+
+  .features-container {
+      height: 100vh;   
+  }
+  .features-title{
+      font-size: 35px;
+      text-align: center;
+  }
+
+  .features-paragraph-content {
+      width: 22em;
+  }
+
+}
+
 

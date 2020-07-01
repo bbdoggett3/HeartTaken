@@ -67,9 +67,9 @@ class SignIn extends Component {
                 <input className="form-blue-btn" type="button" value="Back" />
               </Link>
             </div>
-            <p>
+            <p className="dont-have-sentence">
               Don't already have an account?{" "}
-              <Link to="/register">
+              <Link style={{ textDecoration: "none" }} to="/register">
                 <span className="register-btn-landing">Register Here</span>
               </Link>
             </p>

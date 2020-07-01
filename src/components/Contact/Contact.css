@@ -70,3 +70,22 @@
 .contact-send-btn:hover {
     border: 2px solid #f68ECE;
 }
+
+@media(max-width: 690px) {
+    .contact-container {
+      background-color: white;
+      height: 80vh;
+      width: 100vw;
+      border: none
+    }
+  
+    .contact-title{
+        font-size: 35px;
+        text-align: center;
+    }
+  
+    .contact-paragraph {
+        width: 20em;
+    }
+  
+  }

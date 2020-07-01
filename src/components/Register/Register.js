@@ -75,9 +75,9 @@ class Register extends Component {
                   />
                   </Link>
                 </div>
-                <p>
+                <p className="dont-have-sentence">
                   Already have an account?{" "}
-                  <Link to="/SignIn">
+                  <Link style={{ textDecoration: "none" }} to="/SignIn">
                     <span className="register-btn-landing">Sign in Here</span>
                   </Link>
                 </p>
