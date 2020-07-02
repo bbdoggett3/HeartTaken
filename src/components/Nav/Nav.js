@@ -77,6 +77,7 @@ function Nav(props) {
             </ul>
           </div>
 
+          {/* WEB BROWSER VIEW */}
           <div className="navbar-selection-container">
             <ul className="navbar-selection">
               <Link to="/features">
