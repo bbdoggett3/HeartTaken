@@ -12,8 +12,8 @@ function Landing() {
       <div className="landing-content">
         <p className="page-title-content">DATE, LOVE, REPEAT...</p>
         <p className="paragraph-content">
-          Evidence shows that married couples who devote time together at least
-          once a week not only have lower divorce rates, but also increase the
+          For years data consistantly has shown that married couples who devote a little time together at least
+          once a day not only have lower divorce rates, but also increase the
           preceived quality of their marriage. That is enough evidenceto start
           dating your spouse more! We can help here at HeartTaken
         </p>
