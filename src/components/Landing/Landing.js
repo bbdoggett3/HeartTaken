@@ -12,10 +12,9 @@ function Landing() {
       <div className="landing-content">
         <p className="page-title-content">DATE, LOVE, REPEAT...</p>
         <p className="paragraph-content">
-          For years data consistantly has shown that married couples who devote a little time together at least
-          once a day not only have lower divorce rates, but also increase the
-          preceived quality of their marriage. That is enough evidenceto start
-          dating your spouse more! We can help here at HeartTaken
+          For years data has shown that married couples who devote a little time together at least
+          once a day not only have lower divorce rates, and also increase the overall quality of their marriage. That is enough evidence 
+          to start dating your spouse more! We can help here at HeartTaken
         </p>
         <hr className="line-bar" />
         <Link to="/signIn">
